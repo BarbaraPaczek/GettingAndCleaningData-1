@@ -51,7 +51,7 @@ subjects <- rbind(subjectTrain, subjectTest)
 names(subjects) <- c("subjectID")
 dataSet2 <- cbind(dataSet, subjects)
 
-# get dataset with averages of each variable for each activity
+# get dataset with averages of each variable for each activity and each subject
 dataSet2 <- aggregate(. ~ subjectID + activityLabel, dataSet2, mean)
 
 # create output file
