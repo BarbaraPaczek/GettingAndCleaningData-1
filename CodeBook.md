@@ -1,11 +1,42 @@
-Data transformation
-===================
-
-1. df
-2. 
-
 Code book
 =========
+
+### Description
+
+The following list contains variables in the dataset created by run_analysis.R script - output.txt
+
+The features selected come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+
+The variables used in the dataset are estimations from these signals for:
+* mean() - mean value
+* std() - standard deviation
+
+
+### Dataset variables
+
+* subjectID - identificator of the subject performing the experiment.
+
+   Possible values: 1 - 30
+
+* activityLabel - description of the activity performed by the subject.
+
+   Possible values:
+   * WALKING
+   * WALKING_UPSTAIRS
+   * WALKING_DOWNSTAIRS
+   * SITTING
+   * STANDING
+   * LAYING
+
+The rest of the following variables are in line with the description above. The values are averages for each activity and each subject.
 
 * tBodyAcc-mean()-X
 * tBodyAcc-mean()-Y
@@ -73,4 +104,3 @@ Code book
 * fBodyBodyAccJerkMag-std()
 * fBodyBodyGyroMag-std()
 * fBodyBodyGyroJerkMag-std()
-* activityLabel
